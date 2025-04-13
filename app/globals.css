@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    /* Primary: Deep purple to electric blue gradient */
+    --primary: 260 90% 57%; /* #5A31F4 */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+
+    /* Secondary: Subtle black */
+    --secondary: 240 10% 3.9%; /* #121212 */
+    --secondary-foreground: 0 0% 100%; /* White text on secondary */
+
+    /* Accent: Deep purple */
+    --accent: 260 90% 57%; /* #5A31F4 */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+
+    /* Destructive remains red */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Muted: Lighter version of our black */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    /* Card and Popover: White */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Border and Input: Subtle gray */
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+
+    /* Ring: Primary color */
+    --ring: 260 90% 57%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%; /* #121212 */
+    --foreground: 0 0% 98%; /* White text */
+
+    /* Primary: Deep purple to electric blue gradient */
+    --primary: 260 90% 57%; /* #5A31F4 */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+
+    /* Secondary: Clean white */
+    --secondary: 0 0% 100%; /* #FFFFFF */
+    --secondary-foreground: 240 10% 3.9%; /* Black text on secondary */
+
+    /* Accent: Deep purple */
+    --accent: 260 90% 57%; /* #5A31F4 */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+
+    /* Destructive remains red */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Muted: Darker version of our black */
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    /* Card and Popover: Dark */
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Border and Input: Darker gray */
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+
+    /* Ring: Primary color */
+    --ring: 260 90% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom gradient button styles */
+.btn-gradient {
+  @apply bg-primary-gradient text-white hover:opacity-90 transition-opacity;
+}
+
+/* Custom styles for the primary gradient background */
+.bg-gradient-primary {
+  @apply bg-primary-gradient;
+}
+
+/* Custom styles for CTA buttons */
+.btn-cta {
+  @apply bg-primary-gradient text-white hover:opacity-90 transition-opacity;
+}
